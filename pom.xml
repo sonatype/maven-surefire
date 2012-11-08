@@ -96,11 +96,27 @@
     <module>surefire-integration-tests</module>
   </modules>
 
+  <!-- SONATYPE -->
   <scm>
-    <connection>scm:git:https://git-wip-us.apache.org/repos/asf/maven-surefire.git</connection>
-    <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/maven-surefire.git</developerConnection>
-    <url>https://git-wip-us.apache.org/repos/asf?p=maven-surefire</url>
+    <connection>scm:git:git@github.com:sonatype/maven-surefire.git</connection>
+    <developerConnection>scm:git:git@github.com:sonatype/maven-surefire.git</developerConnection>
+    <url>https://github.com/sonatype/maven-surefire</url>
   </scm>
+  <distributionManagement>
+    <repository>
+      <id>forge-releases</id>
+      <url>https://repository.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>forge-snapshots</id>
+      <url>https://repository.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <site>
+      <id>forge-sites</id>
+      <url>dav:https://repository.sonatype.org/content/sites/maven-sites/nexus-oss/nexus</url>
+    </site>
+  </distributionManagement>
+
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/SUREFIRE</url>
